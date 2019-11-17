@@ -42,7 +42,7 @@ namespace WindowsFormsBomber
         }
 
         public Bomber(int maxSpeed, float weight, Color mainColor, Color dopColor, bool spire, bool bombs, bool emblem)
-            : base (maxSpeed, weight, mainColor)
+            : base(maxSpeed, weight, mainColor)
         {
             DopColor = dopColor;
             Spire = spire;
@@ -64,7 +64,7 @@ namespace WindowsFormsBomber
             base.DrawWarPlane(g);
             if (Emblem)
             {
-                Brush emblem = new SolidBrush(Color.Red);
+                Brush emblem = new SolidBrush(DopColor);
                 g.FillEllipse(emblem, _startPosX + 45, _startPosY + 50, 10, 10);
                 g.DrawEllipse(pen, _startPosX + 45, _startPosY + 50, 10, 10);
             }
