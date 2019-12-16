@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 
@@ -83,7 +83,6 @@ namespace WindowsFormsBomber
             }
             return null;
         }
-
         /// <summary>
         /// Метод проверки заполнености парковочного места
         /// </summary>
@@ -105,7 +104,6 @@ namespace WindowsFormsBomber
             for (int i = 0; i < keys.Count; i++)
                 _places[keys[i]].DrawWarPlane(g);
         }
-
         /// <summary>
         /// Метод отрисовки разметки парковочных мест
         /// </summary>

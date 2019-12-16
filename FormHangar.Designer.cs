@@ -87,7 +87,6 @@
             this.groupBoxGetWarPlane.TabIndex = 3;
             this.groupBoxGetWarPlane.TabStop = false;
             this.groupBoxGetWarPlane.Text = "Забрать самолет";
-            // 
             // pictureBoxWarPlane
             // 
             this.pictureBoxWarPlane.Location = new System.Drawing.Point(9, 78);
@@ -114,7 +113,6 @@
             this.labelPlace.Size = new System.Drawing.Size(45, 13);
             this.labelPlace.TabIndex = 1;
             this.labelPlace.Text = "Место: ";
-            // 
             // maskedTextBoxPlace
             // 
             this.maskedTextBoxPlace.Location = new System.Drawing.Point(74, 23);
