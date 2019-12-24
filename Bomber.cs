@@ -41,6 +41,16 @@ namespace WindowsFormsBomber
             get { return _countBombs; }
         }
 
+        /// <summary>
+        /// Конструктор
+        /// </summary>
+        /// <param name="maxSpeed">Максимальная скорость</param>
+        /// <param name="weight">Вес военного самолета</param>
+        /// <param name="mainColor">Основной цвет</param>
+        /// <param name="dopColor">Дополнительный цвет</param>
+        /// <param name="spire">Признак наличия шпиля</param>
+        /// <param name="bombs">Признак наличия бомб</param>
+        /// <param name="emblem">Признак наличия эмблемы</param>
         public Bomber(int maxSpeed, float weight, Color mainColor, Color dopColor, bool spire, bool bombs, bool emblem)
             : base(maxSpeed, weight, mainColor)
         {
@@ -50,6 +60,25 @@ namespace WindowsFormsBomber
             Emblem = emblem;
             Random rnd = new Random();
             CountBombs = rnd.Next(1, 11);
+        }
+
+        /// <summary>
+        /// Конструктор
+        /// </summary>
+        /// <param name="info">Информация по объекту</param>
+        public Bomber(string info) : base(info)
+        {
+            string[] strs = info.Split(';');
+            if (strs.Length == 7)
+            {
+                MaxSpeed = Convert.ToInt32(strs[0]);
+                Weight = Convert.ToInt32(strs[1]);
+                MainColor = Color.FromName(strs[2]);
+                DopColor = Color.FromName(strs[3]);
+                Spire = Convert.ToBoolean(strs[4]);
+                Emblem = Convert.ToBoolean(strs[5]);
+                Bombs = Convert.ToBoolean(strs[6]);
+            }
         }
 
         public override void DrawWarPlane(Graphics g)
@@ -107,6 +136,11 @@ namespace WindowsFormsBomber
         public void SetDopColor(Color color)
         {
             DopColor = color;
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + ";" + DopColor.Name + ";" + Spire + ";" + Bombs + ";" + Emblem;
         }
     }
 }
