@@ -35,6 +35,8 @@ namespace WindowsFormsBomber
         public MultiLevelHangar(int countStages, int pictureWidth, int pictureHeight)
         {
             hangarStages = new List<Hangar<ITransport>>();
+            this.pictureWidth = pictureWidth;
+            this.pictureHeight = pictureHeight;
             for (int i = 0; i < countStages; ++i)
                 hangarStages.Add(new Hangar<ITransport>(countPlaces, pictureWidth, pictureHeight));
         }
