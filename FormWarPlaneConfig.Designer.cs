@@ -243,6 +243,7 @@
             this.Controls.Add(this.panelWarPlane);
             this.Controls.Add(this.groupBox);
             this.Name = "FormWarPlaneConfig";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Выбор военного самолета";
             this.groupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWarPlane)).EndInit();
